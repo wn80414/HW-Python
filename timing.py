@@ -20,7 +20,7 @@ def calculate_time(func):
         afterTime = time.time()
         runTime = afterTime - currentTime  #Finds the difference between currentTime and afterTime to find total run time
         print("Total time", runTime)
-        return value
+        return funcValue
     return wrapper
 
 
