@@ -14,7 +14,7 @@ def tripler(func):
     Hey
     """
     def wrapper():
-        func(*args, **kwargs)
-        func(*args, **kwargs)
-        func(*args, **kwargs)
+        func()
+        func()
+        func()
     return wrapper
