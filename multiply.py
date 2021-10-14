@@ -10,8 +10,12 @@ def multiply_list(listParam):
     Parameters
     ----------
     list : list
-        List with elements to be multiplied. 
+        List with elements to be multiplied.
 
+    Returns
+    -------
+    int 
+        Product of all elements in the list.
     Examples
     --------
     list = [1, 2 ,3 ,4 ,5]
@@ -26,12 +30,12 @@ def multiply_list(listParam):
     >>> multiply_list(listParam)
     false
     '''
-    total = 1                   #Starts with a value of 1
+    total = 1                   #Starts with a value of 1 so when the first element is multiplied the total will = first element
     if len(listParam) == 0:  
         return False            #Returns false if array is empty
     for num in listParam:           
-        #Checks for valid input
-        if isinstance(num, int) or isinstance(num, float):
+        #Checking for valid elements 
+        if isinstance(num, int):
             total = num * total
         else:
             return False
