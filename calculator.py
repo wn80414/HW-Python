@@ -28,9 +28,9 @@ def calculator (number1, number2, operator):
     9
         
     """
-    if (number1  == False or number2 == False):    #Checks for valid number
+    if (number1  == False or number2 == False):    #Checking for valid number
         return False
-    if operator == "+":                            #Checks for valid operator
+    if operator == "+":                            #Checking for valid operator
         return number1 + number2
     elif operator == "-":
         return number1 - number2
@@ -70,14 +70,14 @@ def parse_input():
     Enter equation: 3 ** 2
     """
     equation = input("Enter equation: ")
-    valu = equation.split(" ")  #Takes the string and splits it into a list
+    valu = equation.split(" ")  #Taking a string and spliting it by spaces to create a list with each paramenter having its own element
     num1 = valu[0]              
     num2 = valu[2]
     oper = valu[1]
     if not num1.isdigit(): 
-        num1 = False            #Checks if num are valid digits
+        num1 = False            #Checking if nums are valid digits
     else:                       
-        num1 = float(num1)      #Converts from String to Float
+        num1 = float(num1)      #Converts from String to Float in order to calculate in the calculator() method
 
     if not num2.isdigit():
         num2 = False

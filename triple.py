@@ -13,7 +13,7 @@ def tripler(func):
     Hey
     Hey
     """
-    def wrapper():
+    def wrapper():      #Making a wrapper class to call func() 3 times
         func()
         func()
         func()

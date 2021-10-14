@@ -3,7 +3,7 @@ def multiply_list(listParam):
     Multiply elements in a list.
     
     This function multiplies all of the elements in a list to get a product.
-    The function can only multiply ints and floats.
+    The function can only multiply ints.
     It returns false if there is an invalid item inside the list or if
     it is empty.
     
@@ -16,6 +16,7 @@ def multiply_list(listParam):
     -------
     int 
         Product of all elements in the list.
+
     Examples
     --------
     list = [1, 2 ,3 ,4 ,5]
@@ -32,10 +33,9 @@ def multiply_list(listParam):
     '''
     total = 1                   #Starts with a value of 1 so when the first element is multiplied the total will = first element
     if len(listParam) == 0:  
-        return False            #Returns false if array is empty
-    for num in listParam:           
-        #Checking for valid elements 
-        if isinstance(num, int):
+        return False            #Return false if array is empty because you can not multiply nothing
+    for num in listParam:            
+        if isinstance(num, int):  #Checking for valid elements
             total = num * total
         else:
             return False

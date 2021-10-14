@@ -16,12 +16,12 @@ def calculate_time(func):
     """
     def wrapper():
         currentTime = time.time()
-        funcValue = func()                 
+        funcValue = func()                 #Assign func to a variable and return it to avoid Nonetype object not callable error
         afterTime = time.time()
         runTime = afterTime - currentTime  #Finds the difference between currentTime and afterTime to find total run time
         print("Total time", runTime)
         return funcValue
-    return wrapper
+    return wrapper              
 
 
 
